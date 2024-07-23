@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+body {
+    /* text-align: center ; */
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+    background: url(bg.png)
+     no-repeat center center/cover;
+}
+
+#dropbox{
+    padding: 10px;
+    border-radius: 5px;
+    width: 70%;
+}
+
+
+ 
+
+/*login main */
+main {
+    width: 350px;
+    height: 450px;
+    border: 1px solid white;
+    border-radius: 10px;
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.205);
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 1.5px;
+    
+
+  }
+  
+  main:hover,box-shadow{
+    
+    
+    background: linear-gradient(45deg,#712a40, #232323 , #326);
+    
+  }
+
+  form {
+    position: absolute;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    transition: 0.3s;
+  }
+   
+  p{
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  i {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-right: 1px solid lightgray;
+  }
+
+  
+  input {
+    width: 50%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    height: 50%;
+    
+
+  }
+  
+  button {
+    padding: 10px 0;
+    border: none;
+    background-color: #7d3048;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+  }
+  
+  button::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    --border: 2px;
+    border: var(--border) solid #762740;
+    border-radius: 4px;
+    transition: 0.2s;
+  }
+  
+  button:hover::before {
+    inset: calc(var(--border) * -2);
+   
+  }
+  
+  
+  .btn {
+    font-size: 10px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+  }
+  a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: 0.2s;
+    transform: scaleX(0);
+  }
+  
+  a:hover::before {
+    transform: scaleX(1);
+  }
+  
+
+  body.active #login {
+    transform: translateY(500px);
+    
+  }
+  
+  body.active main {
+    transition: 0.3s;
+    height: 500px;
+  }
+  
+  

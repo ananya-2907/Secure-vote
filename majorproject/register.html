@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(./bg.png);
+            
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: cover;
+            
+        }
+
+        
+        main {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 3px 2px;
+            backdrop-filter: blur(25px);
+            display: grid;
+            place-items: center;
+            position: relative;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.205);
+        }
+
+
+        main:hover,box-shadow{
+    
+        background: linear-gradient(70deg,#712a40, #232323 , #326);
+    
+        }
+        
+        .input-container {
+            position: relative;
+            margin-bottom: 20px;
+           
+        }
+        .input-container i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            color: #999;
+        }
+        .input-container input {
+            width: calc(100% - 30px);
+            padding: 10px;
+            padding-left: 30px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+        }
+        .file-container {
+            margin-bottom: 20px;
+        }
+        .file-container input[type="file"] {
+            width: calc(100% - 30px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            padding-left: 30px;
+        }
+
+        .select-container{
+            margin-left: 30px;
+        }
+        .select-container select {
+            width: calc(100% - 30px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            padding-left: 85px;
+        }
+
+        .btn-container{
+            margin-left: 30px;
+        }
+        .btn-container button {
+
+            width: 90%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(59, 57, 57);
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            
+        }
+
+        .btn-container button:hover{
+           background-color: green;
+        }
+
+        .footer {
+            text-align: center;
+
+        }
+        
+        .footer a {
+            text-decoration: none;
+        }
+        input{
+            text-align: center;
+        }
+        
+        p{
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <p>Don't have an account? Signup here</p><br>
+    <form action="connect.php" method="post" enctype="multipart/form-data">
+        <div class="input-container">
+            <i class="material-icons-outlined">people</i>
+            <input type="text" name="name" placeholder="Enter name">
+        </div>
+        <div class="input-container">
+            <i class="material-icons-outlined">phone</i>
+            <input type="number" name="mobile" placeholder="Enter mobile number">
+        </div>
+        <div class="input-container">
+            <i class="material-icons-outlined">lock</i>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+        <div class="input-container">
+            <i class="material-icons-outlined">key</i>
+            <input type="password" name="cpassword" placeholder="Confirm password">
+        </div>
+        <div class="input-container">
+            <i class="material-icons-outlined">subject</i>
+            <input type="text" id="department" name="department" placeholder="Enter department">
+        </div>
+        <div class="file-container">
+            <input type="file" name="photo">
+        </div>
+        <div class="select-container">
+            <select name="role">
+                <option value="1">Voter</option>
+                <option value="2">Candidate</option>
+            </select>
+        </div><br>
+        <div class="btn-container">
+            <button type="submit">Submit</button>
+        </div>
+        <br>
+        <p class="footer">Already have an account? <a href="./index.html">Login</a></p>
+    </form>
+</main>
+
+</body>
+</html>

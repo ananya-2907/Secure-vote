@@ -1,0 +1,154 @@
+
+</body>
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(./bg.png);
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: left top;
+            
+
+        }
+        main {
+            width: 300px;
+            height: 60%;
+            margin: 50px auto;
+            padding: 20px;
+            backdrop-filter: blur(25px);
+            display: grid;
+            place-items: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 3px 2px;
+            background-color: rgb(0, 0, 0, 0.205)
+        }
+
+         main:hover,box-shadow{
+    
+         background: linear-gradient(70deg,#712a40, #232323 , #326);
+
+       }
+
+       form{
+            margin-bottom: 70px;
+            margin-left: 30px;
+          
+        }
+        main h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            
+        }
+
+        .input-container {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        .input-container i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            color: #999;
+        }
+        .input-container input {
+            width: calc(100% - 30px);
+            padding: 10px;
+            padding-left: 120px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            
+        }
+        
+        .btn-container button {
+            width: 90%;
+            height: 12%;
+            border:#fff;
+            border-radius: 5px;
+            background-color: rgb(59, 57, 57);
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .btn-container button:hover{
+           background-color: green;
+           
+        }
+
+        .footer {
+            text-align: center;
+            margin-right: 32px;
+           
+        }
+
+        .footer a {
+            text-decoration: none;
+           
+        }
+
+        input{
+            text-align:start;
+            
+        }
+        
+        p{
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+        }
+         
+
+    </style>
+</head>
+<body>
+    <div id="bodysection">
+<main>
+    <p>Login here using your mobile and password</p>
+      <br><br>
+        <form action="login.php" method="post">
+            <form id="login">
+        <div class="input-container">
+            <i class="material-icons-outlined">phone</i>
+            <input type="text" name="mobile" placeholder="Mobile number">
+        </div>
+        <div class="input-container">
+            <i class="material-icons-outlined">lock</i>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+        <div class="btn-container">
+        <button id="capture" type="submit">capture</button>
+    </div><br>
+        <div class="btn-container">
+            <button type="submit">Login</button>
+        </div><br>
+        <p class="footer">Don't have an account? <a href="./register.html">Register</a></p>
+        <script>
+            // Function to open the capture window
+            function openCaptureWindow() {
+                const captureWindow = window.open('capture.php', 'CaptureWindow', 'width=640,height=520');
+            }
+        
+            // Event listener for the login button
+            const loginButton = document.getElementById('capture');
+            loginButton.addEventListener('click', function() {
+                openCaptureWindow();
+            });
+        </script>
+    </form>
+</main>
+</div>
+</body>
+</html>
